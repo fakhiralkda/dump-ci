@@ -14,4 +14,4 @@ steps:
   - rm -rf .git
   - mv *.sh $HOME
   - cd $HOME
-  - bash start.sh http://bigota.d.miui.com/21.2.3/miui_GINKGO_21.2.3_99c99353ec_11.0.zip
+  - bash start.sh https://bigota.d.miui.com/V12.0.1.0.QCMMIXM/miui_PINEGlobal_V12.0.1.0.QCMMIXM_0af775655d_10.0.zip
