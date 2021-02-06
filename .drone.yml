@@ -1,0 +1,17 @@
+kind: pipeline
+name: androiddumps
+
+steps:
+- name: dumps
+  image: ubuntu:18.04
+  environment:
+    PAT:
+      from_secret: PAT
+  commands:
+  - apt -qq -y update
+  - apt -qq -y upgrade
+  - apt install -qq -y git curl
+  - rm -rf .git
+  - mv *.sh $HOME
+  - cd $HOME
+  - bash start.sh http://bigota.d.miui.com/21.2.3/miui_GINKGO_21.2.3_99c99353ec_11.0.zip
