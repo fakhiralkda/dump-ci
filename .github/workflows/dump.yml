@@ -17,6 +17,5 @@ jobs:
   dump:
     runs-on: ubuntu-20.04
     steps:
-       - run: |
-           rm -rf .git
-           wget -qO - https://raw.githubusercontent.com/fakhiralkda/dump-ci/new/start.sh | bash -s ${LINK}
+       - name: Dumper Brrr
+         run: wget -qO - https://raw.githubusercontent.com/fakhiralkda/dump-ci/new/start.sh | bash -s ${LINK}
