@@ -1,0 +1,22 @@
+name: Dumper
+
+on: 
+  workflow_dispatch:
+    inputs:
+      LINK:
+        description: 'Direct link of rom'
+        required: true
+
+env:
+  LINK: ${{ github.event.inputs.LINK }}
+  PAT: ${{ secrets.PAT }}
+  ORG: ${{ secrets.ORG }}
+  TOKEN: ${{ secrets.TOKEN }}
+
+jobs:
+  dump:
+    runs-on: ubuntu-20.04
+    steps:
+       - run: |
+           rm -rf .git
+           wget -qO - https://raw.githubusercontent.com/fakhiralkda/dump-ci/new/start.sh | bash -s ${LINK}
