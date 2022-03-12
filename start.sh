@@ -7,7 +7,7 @@ git config --global user.name "rzlamrr"
 echo "::endgroup::"
 
 echo "::group::Clone and set Env"
-git clone https://github.com/DroidDumps/phoenix_firmware_dumper dumper
+git clone https://github.com/DumprX/DumprX dumper --quiet
 cd dumper || exit
 
 echo ${PAT} > .github_token
@@ -15,8 +15,8 @@ echo ${ORG} > .github_orgname
 echo ${TOKEN} > .tg_token
 echo "-1001437241144" > .tg_chat
 
-sed -i "s/[p][r][i][n][t][f][ ][\"][\][n][\][n][>][D][u][m][p][e][d][ ][b][y]/#/g" dumper.sh
-sed -i "s/62M/50M/g" dumper.sh
+#sed -i "s/[p][r][i][n][t][f][ ][\"][\][n][\][n][>][D][u][m][p][e][d][ ][b][y]/#/g" dumper.sh
+#sed -i "s/62M/50M/g" dumper.sh
 echo "::endgroup::"
 
 echo "::group::Setup"
